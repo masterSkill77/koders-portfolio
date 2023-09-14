@@ -1,2 +1,2 @@
 <script setup></script>
-<template></template>
+<template>Hello world</template>

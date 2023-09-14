@@ -1,6 +1,6 @@
 <template>
 	<div>
-		Bonjour
+		<AppSpinner />
 		<slot />
 	</div>
 </template>
