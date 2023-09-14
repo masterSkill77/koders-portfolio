@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
 	alias: {
 		'@': '/components',
+		stores: '/stores',
 	},
 	modules: ['@pinia/nuxt'],
 	app: {
