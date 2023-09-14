@@ -5,7 +5,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
 		<NuxtLink to="/" class="navbar-brand p-0">
 			<img
-				src="logo.png"
+				src="/logo.png"
 				width="70"
 				height="70"
 				class="d-inline-block align-top"
