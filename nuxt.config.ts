@@ -3,6 +3,7 @@ export default defineNuxtConfig({
 	alias: {
 		'@': '/components',
 	},
+	modules: ['@pinia/nuxt'],
 	app: {
 		head: {
 			title: 'Team Koders',
