@@ -1,2 +1,7 @@
-<script setup></script>
-<template>Hello world</template>
+<script setup>
+	import { useLoading } from 'stores/useLoading';
+	setTimeout(() => {
+		useLoading().setLoading(false);
+	}, 2000);
+</script>
+<template></template>
