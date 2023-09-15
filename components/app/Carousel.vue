@@ -2,7 +2,6 @@
 	<div
 		id="header-carousel"
 		class="carousel slide carousel-fade"
-		style="height: 600px"
 		data-bs-ride="carousel">
 		<div class="carousel-inner">
 			<div class="carousel-item active">
@@ -78,6 +77,9 @@
 </template>
 <style scoped>
 	@media screen and (max-width: 720px) {
+		#header-carousel {
+			height: 600px;
+		}
 		.carousel-inner,
 		.carousel-item {
 			height: 100% !important;

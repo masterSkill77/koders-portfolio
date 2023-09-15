@@ -4,4 +4,9 @@
 		useLoading().setLoading(false);
 	}, 2000);
 </script>
-<template></template>
+<template>
+	<div>
+		<AppFacts />
+		<AppAbout />
+	</div>
+</template>

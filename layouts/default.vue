@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<Teleport to="body">
 		<AppSpinner />
 		<AppTopbar />
 		<div class="container-fluid position-relative p-0">
@@ -8,5 +8,5 @@
 		</div>
 
 		<slot />
-	</div>
+	</Teleport>
 </template>
