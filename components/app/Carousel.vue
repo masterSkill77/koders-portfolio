@@ -2,6 +2,7 @@
 	<div
 		id="header-carousel"
 		class="carousel slide carousel-fade"
+		style="height: 600px"
 		data-bs-ride="carousel">
 		<div class="carousel-inner">
 			<div class="carousel-item active">
@@ -75,3 +76,15 @@
 		</button>
 	</div>
 </template>
+<style scoped>
+	@media screen and (max-width: 720px) {
+		.carousel-inner,
+		.carousel-item {
+			height: 100% !important;
+		}
+		.carousel-item img {
+			object-fit: cover;
+			height: 100% !important;
+		}
+	}
+</style>
