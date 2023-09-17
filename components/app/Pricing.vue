@@ -10,8 +10,8 @@
 				toggleActions: 'restart reverse restart resume',
 			},
 			yoyo: true,
-			duration: 1,
-			y: -100,
+			opacity: 0,
+			scale: 0.5,
 		});
 		gsap.from('.plan2', {
 			ease: 'fade',
@@ -20,8 +20,8 @@
 				toggleActions: 'restart reverse restart resume',
 			},
 			yoyo: true,
-			duration: 1,
-			y: -100,
+			opacity: 0,
+			scale: 0.5,
 		});
 		gsap.from('.plan3', {
 			ease: 'fade',
@@ -30,8 +30,8 @@
 				toggleActions: 'restart reverse restart resume',
 			},
 			yoyo: true,
-			duration: 1,
-			y: -100,
+			opacity: 0,
+			scale: 0.5,
 		});
 	}
 </script>
@@ -49,7 +49,7 @@
 					text="We are Offering Competitive Prices for Our Clients"
 					tag="h1" />
 			</div>
-			<div class="row g-2">
+			<div class="row g-4">
 				<CommonsPriceCard
 					class="plan1"
 					title="Basic Plan"

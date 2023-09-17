@@ -5,7 +5,7 @@
 			<div class="row g-5">
 				<div class="col-lg-7">
 					<div class="section-title position-relative pb-3 mb-5">
-						<CommonsTItle
+						<CommonsTitle
 							tag="h5"
 							class="fw-bold text-primary text-uppercase"
 							text="Request A Quote" />

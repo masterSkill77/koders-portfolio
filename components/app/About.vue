@@ -139,20 +139,21 @@
 				toggleActions: 'restart reverse restart resume',
 			},
 			yoyo: true,
+			opacity: 0,
 			duration: 1,
 			x: -100,
 		});
 
-		gsap.to('#request_quote', {
+		gsap.from('#request_quote', {
 			ease: 'power2.inOut',
 			scrollTrigger: {
 				trigger: '#request_quote',
-				toggleActions: 'restart reverse restart resume',
+				toggleActions: 'restart pause pause resume',
 				scrub: true,
 			},
 			opacity: 1,
-			duration: 2.5,
-			scale: 1.2,
+			duration: 0.5,
+			scale: 0.5,
 		});
 
 		gsap.to('#phone_number', {
