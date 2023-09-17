@@ -8,5 +8,6 @@
 	<div>
 		<AppFacts />
 		<AppAbout />
+		<AppService />
 	</div>
 </template>

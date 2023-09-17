@@ -21,8 +21,8 @@
 		<div class="collapse navbar-collapse" id="navbarCollapse">
 			<div class="navbar-nav ms-auto py-0">
 				<NuxtLink to="/" class="nav-item nav-link active">Home</NuxtLink>
-				<NuxtLink to="/about" class="nav-item nav-link">About</NuxtLink>
-				<a href="service.html" class="nav-item nav-link">Services</a>
+				<NuxtLink to="/" class="nav-item nav-link">About</NuxtLink>
+				<NuxtLink to="/" class="nav-item nav-link">Services</NuxtLink>
 				<div class="nav-item dropdown">
 					<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
 						>Blog</a

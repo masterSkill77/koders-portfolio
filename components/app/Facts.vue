@@ -1,10 +1,11 @@
 <template>
-	<div class="container-fluid facts py-5 pt-lg-0">
+	<div class="container-fluid facts py-5 pt-lg-0" id="facts">
 		<div class="container py-5 pt-lg-0">
 			<div class="row gx-0">
 				<div
 					class="col-lg-4 wow zoomIn"
 					data-wow-delay="0.1s"
+					id="happy_client"
 					style="
 						visibility: visible;
 						animation-delay: 0.1s;
@@ -27,6 +28,7 @@
 				<div
 					class="col-lg-4 wow zoomIn"
 					data-wow-delay="0.3s"
+					id="project_done"
 					style="
 						visibility: visible;
 						animation-delay: 0.3s;
@@ -48,6 +50,7 @@
 				</div>
 				<div
 					class="col-lg-4 wow zoomIn"
+					id="win_awards"
 					data-wow-delay="0.6s"
 					style="
 						visibility: visible;
@@ -72,3 +75,22 @@
 		</div>
 	</div>
 </template>
+<script setup>
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/all';
+	if (process.client) {
+		gsap.registerPlugin(ScrollTrigger);
+		const timeline = gsap.timeline({
+			yoyo: true,
+			scrollTrigger: {
+				trigger: '#facts',
+				toggleActions: 'restart reverse reverse resume',
+			},
+		});
+		timeline.from('#facts', {
+			ease: 'fade',
+			duration: 1,
+			scale: 0.9,
+		});
+	}
+</script>
