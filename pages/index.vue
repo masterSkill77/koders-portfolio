@@ -9,5 +9,7 @@
 		<AppFacts />
 		<AppAbout />
 		<AppService />
+		<AppPricing />
+		<AppContact />
 	</div>
 </template>

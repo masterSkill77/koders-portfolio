@@ -14,6 +14,7 @@
 						<img
 							class="w-100 h-100 rounded"
 							id="image_demo"
+							style="object-fit: cover"
 							src="/img/about.jpg" />
 					</div>
 				</div>
@@ -43,12 +44,21 @@
 								animation-delay: 0.2s;
 								animation-name: zoomIn;
 							">
-							<h5 class="mb-3">
-								<i class="fa fa-check text-primary me-3"></i>Award Winning
-							</h5>
-							<h5 class="mb-3">
-								<i class="fa fa-check text-primary me-3"></i>Professional Staff
-							</h5>
+							<CommonsTitle
+								class="mb-3"
+								tag="h5"
+								text="Award winning"
+								icon="check"
+								icon-color="primary"
+								icon-position="start" />
+
+							<CommonsTitle
+								class="mb-3"
+								tag="h5"
+								text="Professionnal staff"
+								icon="check"
+								icon-color="primary"
+								icon-position="start" />
 						</div>
 						<div
 							class="col-sm-6 wow zoomIn"
@@ -58,12 +68,21 @@
 								animation-delay: 0.4s;
 								animation-name: zoomIn;
 							">
-							<h5 class="mb-3">
-								<i class="fa fa-check text-primary me-3"></i>24/7 Support
-							</h5>
-							<h5 class="mb-3">
-								<i class="fa fa-check text-primary me-3"></i>Fair Prices
-							</h5>
+							<CommonsTitle
+								class="mb-3"
+								tag="h5"
+								text="24/7 Support"
+								icon="check"
+								icon-color="primary"
+								icon-position="start" />
+
+							<CommonsTitle
+								class="mb-3"
+								tag="h5"
+								text="Fair Prices"
+								icon="check"
+								icon-color="primary"
+								icon-position="start" />
 						</div>
 					</div>
 					<div
@@ -76,8 +95,8 @@
 						">
 						<div
 							class="bg-primary d-flex align-items-center justify-content-center rounded"
-							style="width: 60px; height: 60px">
-							<i class="fa fa-phone-alt text-white"></i>
+							style="width: 60px; height: 60px; border-radius: 30px !important">
+							<i id="phone_number" class="fa fa-phone-alt text-white"></i>
 						</div>
 						<div class="ps-4">
 							<CommonsTitle
@@ -91,9 +110,10 @@
 						</div>
 					</div>
 					<a
-						href="quote.html"
+						href="/"
 						class="btn btn-primary py-3 px-5 mt-3 wow zoomIn"
 						data-wow-delay="0.9s"
+						id="request_quote"
 						style="
 							visibility: hidden;
 							animation-delay: 0.9s;
@@ -111,15 +131,40 @@
 	import { ScrollTrigger } from 'gsap/all';
 	if (process.client) {
 		gsap.registerPlugin(ScrollTrigger);
+
 		gsap.from('#image_demo', {
 			ease: 'fade',
 			scrollTrigger: {
 				trigger: '#image_demo',
-				toggleActions: 'restart reverse resume resume',
+				toggleActions: 'restart reverse restart resume',
 			},
 			yoyo: true,
 			duration: 1,
 			x: -100,
+		});
+
+		gsap.to('#request_quote', {
+			ease: 'power2.inOut',
+			scrollTrigger: {
+				trigger: '#request_quote',
+				toggleActions: 'restart reverse restart resume',
+				scrub: true,
+			},
+			opacity: 1,
+			duration: 2.5,
+			scale: 1.2,
+		});
+
+		gsap.to('#phone_number', {
+			ease: 'power2.inOut',
+			scrollTrigger: {
+				trigger: '#phone_number',
+				toggleActions: 'restart reverse reverse resume',
+				scrub: true,
+			},
+			opacity: 1,
+			duration: 1,
+			rotate: 360,
 		});
 	}
 </script>
