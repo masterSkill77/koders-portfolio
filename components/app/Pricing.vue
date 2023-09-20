@@ -33,12 +33,23 @@
 			opacity: 0,
 			scale: 0.5,
 		});
+		gsap.from('#pricing-title', {
+			scrollTrigger: {
+				trigger: '#pricing-title',
+				toggleActions: 'restart reverse restart resume',
+			},
+			ease: 'fade',
+			scale: 0.7,
+			opacity: 0,
+			duration: 1,
+		});
 	}
 </script>
 <template>
 	<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
 		<div class="container py-5">
 			<div
+				id="pricing-title"
 				class="section-title text-center position-relative pb-3 mb-5 mx-auto"
 				style="max-width: 600px">
 				<CommonsTitle
