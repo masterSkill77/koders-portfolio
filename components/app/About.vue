@@ -87,14 +87,10 @@
 					</div>
 					<div
 						class="d-flex align-items-center mb-4 wow fadeIn"
-						data-wow-delay="0.6s"
-						style="
-							visibility: visible;
-							animation-delay: 0.6s;
-							animation-name: fadeIn;
-						">
+						data-wow-delay="0.6s">
 						<div
-							class="bg-primary d-flex align-items-center justify-content-center rounded"
+							id="phone-container"
+							class="d-flex align-items-center justify-content-center rounded"
 							style="width: 60px; height: 60px; border-radius: 30px !important">
 							<i id="phone_number" class="fa fa-phone-alt text-white"></i>
 						</div>
@@ -143,19 +139,6 @@
 			duration: 1,
 			x: -100,
 		});
-
-		gsap.from('#request_quote', {
-			ease: 'power2.inOut',
-			scrollTrigger: {
-				trigger: '#request_quote',
-				toggleActions: 'restart pause pause resume',
-				scrub: true,
-			},
-			opacity: 1,
-			duration: 0.5,
-			scale: 0.5,
-		});
-
 		gsap.to('#phone_number', {
 			ease: 'power2.inOut',
 			scrollTrigger: {
@@ -166,6 +149,17 @@
 			opacity: 1,
 			duration: 1,
 			rotate: 360,
+		});
+		gsap.to('#phone-container', {
+			ease: 'fade',
+			scrollTrigger: {
+				trigger: '#phone-container',
+				toggleActions: 'restart reverse reverse resume',
+				scrub: true,
+			},
+			backgroundColor: '#142023',
+			opacity: 1,
+			duration: 1,
 		});
 	}
 </script>
