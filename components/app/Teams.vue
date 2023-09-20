@@ -16,19 +16,19 @@
 		timeline.from('#card-1', {
 			opacity: 0,
 			scale: 0.7,
-			duration: 2,
+			duration: 1.3,
 		});
 
 		timeline.from('#card-2', {
 			opacity: 0,
 			scale: 0.7,
-			duration: 2,
+			duration: 1.3,
 		});
 
 		timeline.from('#card-3', {
 			opacity: 0,
 			scale: 0.7,
-			duration: 2,
+			duration: 1.3,
 		});
 	}
 </script>
