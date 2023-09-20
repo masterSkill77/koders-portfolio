@@ -8,5 +8,6 @@
 		</div>
 
 		<slot />
+		<AppFooter />
 	</Teleport>
 </template>

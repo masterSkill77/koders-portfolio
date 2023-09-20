@@ -10,6 +10,7 @@
 		<AppAbout />
 		<AppService />
 		<AppPricing />
+		<AppTeams />
 		<AppContact />
 	</div>
 </template>
