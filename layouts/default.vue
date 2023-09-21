@@ -9,5 +9,6 @@
 
 		<slot />
 		<AppFooter />
+		<CommonsBackTop />
 	</Teleport>
 </template>

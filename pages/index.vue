@@ -13,5 +13,4 @@
 		<AppTeams />
 		<AppContact />
 	</div>
-	<CommonsBackTop />
 </template>
