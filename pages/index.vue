@@ -12,6 +12,6 @@
 		<AppPricing />
 		<AppTeams />
 		<AppContact />
-		<CommonsBackTop />
 	</div>
+	<CommonsBackTop />
 </template>

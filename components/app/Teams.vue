@@ -4,7 +4,6 @@
 
 	if (process.client) {
 		gsap.registerPlugin(ScrollTrigger);
-
 		const timeline = gsap.timeline({
 			smoothChildTiming: true,
 			scrollTrigger: {
@@ -12,7 +11,11 @@
 				toggleActions: 'restart pause restart resume',
 			},
 		});
-
+		timeline.from('#teams-title', {
+			opacity: 0,
+			x: 500,
+			duration: 0.7,
+		});
 		timeline.from('#card-1', {
 			opacity: 0,
 			scale: 0.7,
@@ -37,6 +40,7 @@
 	<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
 		<div class="container py-5">
 			<div
+				id="teams-title"
 				class="section-title text-center position-relative pb-3 mb-5 mx-auto"
 				style="max-width: 600px">
 				<CommonsTitle
