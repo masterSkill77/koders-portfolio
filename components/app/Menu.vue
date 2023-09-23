@@ -32,7 +32,7 @@
 						<a href="detail.html" class="dropdown-item">Blog Detail</a>
 					</div>
 				</div>
-				<a href="contact.html" class="nav-item nav-link">Contact</a>
+				<NuxtLink to="/contact" class="nav-item nav-link">Contact</NuxtLink>
 			</div>
 		</div>
 	</nav>
