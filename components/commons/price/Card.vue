@@ -5,14 +5,7 @@
 	});
 </script>
 <template>
-	<div
-		class="col-lg-4 wow slideInUp"
-		data-wow-delay="0.6s"
-		style="
-			visibility: visible;
-			animation-delay: 0.6s;
-			animation-name: slideInUp;
-		">
+	<div class="col-lg-4">
 		<div class="bg-light rounded">
 			<div class="border-bottom py-4 px-5 mb-4">
 				<CommonsTitle tag="h4" :text="title" class="text-primary mb-1" />

@@ -1,13 +1,23 @@
+<script setup>
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/all';
+	if (process.client) {
+		gsap.registerPlugin(ScrollTrigger);
+		gsap.from('#service-container', {
+			ease: 'fade',
+			scrollTrigger: {
+				trigger: '#service-container',
+				toggleActions: 'restart pause pause resume',
+			},
+			duration: 1,
+			y: -200,
+			opacity: 0,
+		});
+	}
+</script>
 <template>
-	<div
-		class="container-fluid py-5 wow fadeInUp"
-		data-wow-delay="0.1s"
-		style="
-			visibility: visible;
-			animation-delay: 0.1s;
-			animation-name: fadeInUp;
-		">
-		<div class="container py-5">
+	<div class="container-fluid">
+		<div class="container py-5" id="service-container">
 			<div
 				class="section-title text-center position-relative pb-3 mb-5 mx-auto"
 				style="max-width: 600px">

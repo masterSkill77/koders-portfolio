@@ -1,50 +1,43 @@
 <script setup>
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/all';
+
 	if (process.client) {
 		gsap.registerPlugin(ScrollTrigger);
-		gsap.from('.plan1', {
-			ease: 'fade',
-			scrollTrigger: {
-				trigger: '.plan1',
-				toggleActions: 'restart reverse restart resume',
-			},
-			yoyo: true,
+
+		// Créez une timeline pour coordonner les animations
+		const timeline = gsap.timeline({ defaults: { ease: 'power1.out' } });
+
+		// Animation du titre
+		timeline.from('#pricing-title', {
 			opacity: 0,
-			scale: 0.5,
-		});
-		gsap.from('.plan2', {
-			ease: 'fade',
-			scrollTrigger: {
-				trigger: '.plan2',
-				toggleActions: 'restart reverse restart resume',
-			},
-			yoyo: true,
-			opacity: 0,
-			scale: 0.5,
-		});
-		gsap.from('.plan3', {
-			ease: 'fade',
-			scrollTrigger: {
-				trigger: '.plan3',
-				toggleActions: 'restart reverse restart resume',
-			},
-			yoyo: true,
-			opacity: 0,
-			scale: 0.5,
-		});
-		gsap.from('#pricing-title', {
-			scrollTrigger: {
-				trigger: '#pricing-title',
-				toggleActions: 'restart reverse restart resume',
-			},
-			ease: 'fade',
 			scale: 0.7,
-			opacity: 0,
 			duration: 1,
+		});
+
+		// Animation des cartes
+		const cards = ['.plan1', '.plan2', '.plan3'];
+		cards.forEach((card, index) => {
+			timeline.from(card, {
+				opacity: 0,
+				scale: 0.5,
+				y: 50,
+				duration: 0.5,
+				delay: index * 0.2, // Ajoute un léger délai pour les cartes suivantes
+			});
+		});
+
+		// Déclencheur de défilement pour la timeline
+		ScrollTrigger.create({
+			trigger: '#pricing-title', // Changer cela en fonction de l'élément de déclenchement souhaité
+			animation: timeline,
+			start: 'top 80%', // Ajustez cette valeur selon vos besoins
+			end: 'bottom 80%', // Ajustez cette valeur selon vos besoins
+			toggleActions: 'restart none reverse resume',
 		});
 	}
 </script>
+
 <template>
 	<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
 		<div class="container py-5">

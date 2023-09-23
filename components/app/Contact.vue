@@ -1,9 +1,25 @@
-<script setup></script>
+<script setup>
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/all';
+	if (process.client) {
+		gsap.registerPlugin(ScrollTrigger);
+		gsap.from('#contact-container', {
+			ease: 'fade',
+			scrollTrigger: {
+				trigger: '#contact-container',
+				toggleActions: 'restart pause pause resume',
+			},
+			duration: 1,
+			x: -500,
+			opacity: 0,
+		});
+	}
+</script>
 <template>
-	<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+	<div class="container-fluid py-5">
 		<div class="container py-5">
 			<div class="row g-5">
-				<div class="col-lg-7">
+				<div class="col-lg-7" id="contact-container">
 					<div class="section-title position-relative pb-3 mb-5">
 						<CommonsTitle
 							tag="h5"
