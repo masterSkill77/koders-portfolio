@@ -1,14 +1,41 @@
 <script setup>
+	import { ref, onMounted } from 'vue';
+	import { gsap } from 'gsap';
+
+	const animateLogo = (scale, rotate, bdRadius, x) => {
+		if (process.client) {
+			gsap.to('.logo-img', {
+				scale,
+				duration: 1,
+				rotate,
+				borderRadius: bdRadius,
+				x,
+			});
+		}
+	};
+	// declare a ref to hold the element reference
+	// the name must match template ref value
+	const logo = ref(null);
 	const currentRoute = useRouter().currentRoute;
+	const animate = () => {
+		animateLogo(0.8, 360, '50px', 100);
+	};
+	const reset = () => {
+		animateLogo(1, 0, '0px', 0);
+	};
 </script>
 <template>
-	<nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+	<nav
+		class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0"
+		@mouseover="animate"
+		@mouseleave="reset">
 		<NuxtLink to="/" class="navbar-brand p-0">
 			<img
+				ref="logo"
 				src="/logo.png"
 				width="70"
 				height="70"
-				class="d-inline-block align-top"
+				class="d-inline-block align-top logo-img"
 				alt="" />
 		</NuxtLink>
 		<button
