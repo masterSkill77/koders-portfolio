@@ -5,6 +5,22 @@
     --light: #EEF9FF;
     --dark: #091E3E;
 }
+
+html {
+    cursor: none;
+  }
+
+  #circularcursor {
+    background-color: transparent;
+    border: 1px solid #c5e3a869;
+    height: 40px;
+    width: 40px;
+    box-shadow: 1px 2px 15px aqua;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1500000;
+  }
+
 body {
     overflow-x: hidden !important;
 }
@@ -184,7 +200,7 @@ h6,
         border-bottom: 1px solid rgba(256, 256, 256, .1);
         z-index: 999;
     }
-    
+
     .sticky-top.navbar-dark {
         position: fixed;
         background: #FFFFFF;
