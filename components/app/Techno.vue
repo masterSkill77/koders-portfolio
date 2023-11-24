@@ -21,44 +21,156 @@
 			<div>
 				<div class="container-fluid py-5">
 					<div class="container py-0">
-						<div style="height: 150px">
-							<swiper-container
-								slides-per-view="4"
-								:autoplay="{ delay: 1 }"
-								speed="3000"
-								loop="true">
-								<swiper-slide
-									><img src="/img/vendor-1.jpg" alt="" loading="lazy"
-								/></swiper-slide>
-								<swiper-slide
-									><img src="/img/vendor-2.jpg" alt="" loading="lazy"
-								/></swiper-slide>
-								<swiper-slide
-									><img src="/img/vendor-3.jpg" alt="" loading="lazy"
-								/></swiper-slide>
-								<swiper-slide
-									><img src="/img/vendor-4.jpg" alt="" loading="lazy"
-								/></swiper-slide>
-								<swiper-slide
-									><img src="/img/vendor-5.jpg" alt="" loading="lazy"
-								/></swiper-slide>
-								<swiper-slide
-									><img src="/img/vendor-6.jpg" alt="" loading="lazy"
-								/></swiper-slide>
-								<swiper-slide
-									><img src="/img/vendor-7.jpg" alt="" loading="lazy"
-								/></swiper-slide>
-								<swiper-slide
-									><img src="/img/vendor-8.jpg" alt="" loading="lazy"
-								/></swiper-slide>
-								<swiper-slide
-									><img src="/img/vendor-9.jpg" alt="" loading="lazy"
-								/></swiper-slide>
-							</swiper-container>
-						</div>
+						<swiper-container
+							slides-per-view="6"
+							:autoplay="{ delay: 1 }"
+							speed="3000"
+							loop="true">
+							<swiper-slide
+								><img
+									src="/img/techno/solidity.png"
+									alt=""
+									loading="lazy"
+									class="swipper-img"
+							/></swiper-slide>
+
+							<swiper-slide
+								><img
+									src="/img/techno/php.png"
+									alt=""
+									loading="lazy"
+									class="swipper-img"
+							/></swiper-slide>
+
+							<swiper-slide
+								><img
+									src="/img/techno/javascript.png"
+									alt=""
+									loading="lazy"
+									class="swipper-img"
+							/></swiper-slide>
+
+							<swiper-slide
+								><img
+									src="/img/techno/css.png"
+									alt=""
+									loading="lazy"
+									class="swipper-img"
+							/></swiper-slide>
+
+							<swiper-slide
+								><img
+									src="/img/techno/tailwind.png"
+									alt=""
+									loading="lazy"
+									class="swipper-img"
+							/></swiper-slide>
+
+							<swiper-slide
+								><img
+									src="/img/techno/java.png"
+									alt=""
+									loading="lazy"
+									class="swipper-img"
+							/></swiper-slide>
+
+							<swiper-slide
+								><img
+									src="/img/techno/react.png"
+									alt=""
+									loading="lazy"
+									class="swipper-img"
+							/></swiper-slide>
+
+							<swiper-slide
+								><img
+									src="/img/techno/vuejs.png"
+									alt=""
+									loading="lazy"
+									class="swipper-img"
+							/></swiper-slide>
+
+							<swiper-slide
+								><img
+									src="/img/techno/nuxt.png"
+									alt=""
+									loading="lazy"
+									class="swipper-img"
+							/></swiper-slide>
+
+							<swiper-slide
+								><img
+									src="/img/techno/angular.png"
+									alt=""
+									loading="lazy"
+									class="swipper-img"
+							/></swiper-slide>
+
+							<swiper-slide
+								><img
+									src="/img/techno/mysql.png"
+									alt=""
+									loading="lazy"
+									class="swipper-img"
+							/></swiper-slide>
+
+							<swiper-slide
+								><img
+									src="/img/techno/mongodb.png"
+									alt=""
+									loading="lazy"
+									class="swipper-img"
+							/></swiper-slide>
+
+							<swiper-slide
+								><img
+									src="/img/techno/laravel.png"
+									alt=""
+									loading="lazy"
+									class="swipper-img"
+							/></swiper-slide>
+
+							<swiper-slide
+								><img
+									src="/img/techno/nodejs.png"
+									alt=""
+									loading="lazy"
+									class="swipper-img"
+							/></swiper-slide>
+
+							<swiper-slide
+								><img
+									src="/img/techno/spring.png"
+									alt=""
+									loading="lazy"
+									class="swipper-img"
+							/></swiper-slide>
+
+							<swiper-slide
+								><img
+									src="/img/techno/symfony.png"
+									alt=""
+									loading="lazy"
+									class="swipper-img"
+							/></swiper-slide>
+
+							<swiper-slide
+								><img
+									src="/img/techno/rest_api.png"
+									alt=""
+									loading="lazy"
+									class="swipper-img"
+							/></swiper-slide>
+						</swiper-container>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </template>
+<style>
+	.swipper-img {
+		width: 75%;
+		object-fit: fill;
+	}
+</style>
