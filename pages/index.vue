@@ -11,6 +11,7 @@
 		<AppService />
 		<AppPricing />
 		<AppTeams />
+		<AppTechno />
 		<AppContact />
 	</div>
 </template>

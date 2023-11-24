@@ -39,7 +39,7 @@
 </script>
 
 <template>
-	<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+	<div class="container-fluid py-5 wow fadeInUp">
 		<div class="container py-5">
 			<div
 				id="pricing-title"

@@ -13,8 +13,8 @@ html {
   #circularcursor {
     background-color: transparent;
     border: 1px solid #c5e3a869;
-    height: 40px;
-    width: 40px;
+    height: 60px;
+    width: 60px;
     box-shadow: 1px 2px 15px aqua;
     border-radius: 50%;
     position: absolute;
