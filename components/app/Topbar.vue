@@ -9,7 +9,7 @@
 						USA</small
 					>
 					<small class="me-3 text-light"
-						><i class="fa fa-phone-alt me-2"></i>+012 345 6789</small
+						><i class="fa fa-phone-alt me-2"></i>+261 34 68 047 17</small
 					>
 					<small class="text-light"
 						><i class="fa fa-envelope-open me-2"></i>info@example.com</small

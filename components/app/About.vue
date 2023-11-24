@@ -102,7 +102,7 @@
 							<CommonsTitle
 								tag="h5"
 								class="text-primary mb-0"
-								text="+012 345 6789"></CommonsTitle>
+								text="+261 34 68 047 17"></CommonsTitle>
 						</div>
 					</div>
 					<a

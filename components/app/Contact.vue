@@ -68,7 +68,7 @@
 							<CommonsTitle
 								tag="h4"
 								class="text-primary mb-0"
-								text="+012 345 6789" />
+								text="+261 34 68 047 17" />
 						</div>
 					</div>
 				</div>
