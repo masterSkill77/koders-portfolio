@@ -24,7 +24,7 @@
 						<swiper-container
 							slides-per-view="6"
 							:autoplay="{ delay: 1 }"
-							speed="3000"
+							speed="2000"
 							loop="true">
 							<swiper-slide
 								><img
@@ -132,6 +132,22 @@
 
 							<swiper-slide
 								><img
+									src="/img/techno/symfony.png"
+									alt=""
+									loading="lazy"
+									class="swipper-img"
+							/></swiper-slide>
+
+							<swiper-slide
+								><img
+									src="/img/techno/wordpress.png"
+									alt=""
+									loading="lazy"
+									class="swipper-img"
+							/></swiper-slide>
+
+							<swiper-slide
+								><img
 									src="/img/techno/nodejs.png"
 									alt=""
 									loading="lazy"
@@ -140,7 +156,7 @@
 
 							<swiper-slide
 								><img
-									src="/img/techno/spring.png"
+									src="/img/techno/nestjs.png"
 									alt=""
 									loading="lazy"
 									class="swipper-img"
@@ -148,7 +164,7 @@
 
 							<swiper-slide
 								><img
-									src="/img/techno/symfony.png"
+									src="/img/techno/spring.png"
 									alt=""
 									loading="lazy"
 									class="swipper-img"
