@@ -1,69 +1,54 @@
+<script setup>
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/all';
+	import { Flip } from 'gsap/Flip';
+	import { TextPlugin } from 'gsap/TextPlugin';
+	gsap.registerPlugin(ScrollTrigger, Flip, TextPlugin); // Register plugin first
+
+	if (process.client) {
+		gsap.to('#text-animate', 2, {
+			text: 'Creative &amp; Innovative Digital Solution',
+			ease: 'none',
+			scrollTrigger: {
+				trigger: '#text-animate',
+				toggleActions: 'restart restart restart restart',
+			},
+		});
+		// Créer une timeline GSAP
+		const tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: '#text-animate',
+				toggleActions: 'restart restart resume restart',
+			},
+		});
+	}
+</script>
+
 <template>
 	<div
 		id="header-carousel"
 		class="carousel slide carousel-fade"
 		data-bs-ride="carousel">
-		<div class="carousel-inner">
-			<div class="carousel-item active">
-				<img class="w-100" src="/img/carousel-1.jpg" alt="Image" />
-				<div
-					class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-					<div class="p-3" style="max-width: 900px">
-						<h5 class="text-white text-uppercase mb-3 animated slideInDown">
-							Créer & Innover
-						</h5>
-						<h1 class="display-1 text-white mb-md-4 animated zoomIn">
-							Notre créativité & compétences à votre service
-						</h1>
-						<a
-							href="quote.html"
-							class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
-							>Contacter</a
-						>
-					</div>
-				</div>
-			</div>
-			<div class="carousel-item">
-				<img class="w-100" src="/img/carousel-2.jpg" alt="Image" />
-				<div
-					class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-					<div class="p-3" style="max-width: 900px">
-						<h5 class="text-white text-uppercase mb-3 animated slideInDown">
-							Creative & Innovative
-						</h5>
-						<h1 class="display-1 text-white mb-md-4 animated zoomIn">
-							Creative & Innovative Digital Solution
-						</h1>
-						<a
-							href="quote.html"
-							class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
-							>Free Quote</a
-						>
-						<a
-							href=""
-							class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight"
-							>Contact Us</a
-						>
-					</div>
+		<div
+			class="carousel-inner"
+			style="
+				height: 900px;
+				max-height: 900px;
+				background: linear-gradient(rgba(9, 30, 62, 0.7), rgba(9, 30, 62, 0.7)),
+					url('/img/carousel-1.jpg') center center no-repeat;
+				background-size: cover;
+				padding-top: 100px;
+				margin-bottom: 100px;
+			">
+			<div
+				class="w-100 p-2 d-flex gap-2 justify-content-center text-white align-items-center">
+				<div class="col-md-5" style="min-height: 600px; padding-top: 175px">
+					<h1
+						class="display-1 text-white mb-md-4 animated"
+						id="text-animate"></h1>
 				</div>
 			</div>
 		</div>
-		<button
-			class="carousel-control-prev"
-			type="button"
-			data-bs-target="#header-carousel"
-			data-bs-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Previous</span>
-		</button>
-		<button
-			class="carousel-control-next"
-			type="button"
-			data-bs-target="#header-carousel"
-			data-bs-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Next</span>
-		</button>
 	</div>
 </template>
 <style scoped>
@@ -71,12 +56,13 @@
 		#header-carousel {
 			height: 600px;
 		}
+		.img-logo {
+			width: 20% !important;
+			height: 20% !important;
+			object-fit: cover;
+		}
 		.carousel-inner,
 		.carousel-item {
-			height: 100% !important;
-		}
-		.carousel-item img {
-			object-fit: cover;
 			height: 100% !important;
 		}
 	}

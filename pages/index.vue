@@ -1,5 +1,6 @@
 <script setup>
 	import { useLoading } from 'stores/useLoading';
+	useLoading().setLoading(true);
 	setTimeout(() => {
 		useLoading().setLoading(false);
 	}, 2000);
@@ -9,7 +10,6 @@
 		<AppFacts />
 		<AppAbout />
 		<AppService />
-		<AppPricing />
 		<AppTeams />
 		<AppTechno />
 		<AppContact />

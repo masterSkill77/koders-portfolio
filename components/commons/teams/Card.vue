@@ -1,7 +1,7 @@
 <template>
 	<div class="team-item bg-light rounded overflow-hidden">
 		<div class="team-img position-relative overflow-hidden">
-			<img class="img-fluid w-100" src="/img/team-1.jpg" alt="" />
+			<img class="img-fluid w-100" src="/img/clairmont.jpg" loading="lazy" alt="" />
 			<div class="team-social">
 				<a class="btn btn-lg btn-primary btn-lg-square rounded" href=""
 					><i class="fab fa-twitter fw-normal"></i
