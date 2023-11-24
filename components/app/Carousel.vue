@@ -6,8 +6,8 @@
 	gsap.registerPlugin(ScrollTrigger, Flip, TextPlugin); // Register plugin first
 
 	if (process.client) {
-		gsap.to('#text-animate', 2, {
-			text: 'Creative &amp; Innovative Digital Solution',
+		gsap.to('#text-animate', 4, {
+			text: "Une entreprise jeune, dynamique &amp; Innovante dans le domaine de l'IT",
 			ease: 'none',
 			scrollTrigger: {
 				trigger: '#text-animate',
@@ -44,7 +44,7 @@
 				class="w-100 p-2 d-flex gap-2 justify-content-center text-white align-items-center">
 				<div class="col-md-5" style="min-height: 600px; padding-top: 175px">
 					<h1
-						class="display-1 text-white mb-md-4 animated"
+						class="display-1 text-white text-center mb-md-4 animated"
 						id="text-animate"></h1>
 				</div>
 			</div>

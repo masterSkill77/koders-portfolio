@@ -50,15 +50,7 @@
 				<NuxtLink to="/" class="nav-item nav-link">Home</NuxtLink>
 				<NuxtLink to="/" class="nav-item nav-link">About</NuxtLink>
 				<NuxtLink to="/services" class="nav-item nav-link">Services</NuxtLink>
-				<div class="nav-item dropdown">
-					<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
-						>Blog</a
-					>
-					<div class="dropdown-menu m-0">
-						<a href="blog.html" class="dropdown-item">Blog Grid</a>
-						<a href="detail.html" class="dropdown-item">Blog Detail</a>
-					</div>
-				</div>
+				<NuxtLink to="/portfolio" class="nav-item nav-link">Portfolio</NuxtLink>
 				<NuxtLink to="/contact" class="nav-item nav-link">Contact</NuxtLink>
 			</div>
 		</div>
