@@ -46,10 +46,10 @@
 				<CommonsTitle
 					tag="h5"
 					class="fw-bold text-primary text-uppercase"
-					text="Team Members" />
+					text="Nos collaborateurs" />
 				<CommonsTitle
 					tag="h1"
-					text="Professional Stuffs Ready to Help Your Business" />
+					text="Des professionnels, des talents rares, une équipe au complet" />
 			</div>
 			<div class="row g-5" id="teams-section">
 				<div class="col-lg-4" id="card-1">

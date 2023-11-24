@@ -23,18 +23,15 @@
 						<CommonsTitle
 							tag="h3"
 							class="fw-bold text-primary text-uppercase"
-							text="About Us" />
+							text="Qui sommes nous ?" />
 						<CommonsTitle
 							tag="h1"
-							text="The Best IT Solution With 10 Years of Experience" />
+							text="Nous sommes une ESN basée à Madagascar" />
 					</div>
 					<CommonsText
 						tag="p"
 						class="mb-4"
-						text="Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor
-						sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem
-						et sit, sed stet no labore lorem sit. Sanctus clita duo justo et
-						tempor eirmod magna dolore erat amet" />
+						text="Koders est une jeune startup qui fait son petit bout de chemin dans le monde de l'IT. Composé de 6 ingénieurs en informatique, sortie de la plus grande école du pays, nous avons décider de bâtir ensemble pour l'avenir, et d'offrir notre expertise au service du quotidien." />
 					<div class="row g-0 mb-3">
 						<div
 							class="col-sm-6 wow zoomIn"
@@ -47,7 +44,7 @@
 							<CommonsTitle
 								class="mb-3"
 								tag="h5"
-								text="Award winning"
+								text="Disponible de suite"
 								icon="check"
 								icon-color="primary"
 								icon-position="start" />
@@ -55,7 +52,7 @@
 							<CommonsTitle
 								class="mb-3"
 								tag="h5"
-								text="Professionnal staff"
+								text="Une équipe polyvalente"
 								icon="check"
 								icon-color="primary"
 								icon-position="start" />
@@ -71,7 +68,7 @@
 							<CommonsTitle
 								class="mb-3"
 								tag="h5"
-								text="24/7 Support"
+								text="Support à tout moment"
 								icon="check"
 								icon-color="primary"
 								icon-position="start" />
@@ -79,7 +76,7 @@
 							<CommonsTitle
 								class="mb-3"
 								tag="h5"
-								text="Fair Prices"
+								text="Tarification abordable"
 								icon="check"
 								icon-color="primary"
 								icon-position="start" />
@@ -98,7 +95,7 @@
 							<CommonsTitle
 								tag="h4"
 								class="mb-2"
-								text="Call to ask any question"></CommonsTitle>
+								text="Un coup de fil et on est là pour vous"></CommonsTitle>
 							<CommonsTitle
 								tag="h5"
 								class="text-primary mb-0"

@@ -24,9 +24,9 @@
 						<CommonsTitle
 							tag="h5"
 							class="fw-bold text-primary text-uppercase"
-							text="Request A Quote" />
+							text="Demander un devis" />
 						<CommonsTitle
-							text="Need A Free Quote? Please Feel Free to Contact Us"
+							text="Besoin de discuter de votre projet ? On est à votre écoute, n'hesitez-pas à nous joindre"
 							tag="h1" />
 					</div>
 					<div class="row gx-3">
@@ -36,7 +36,7 @@
 								icon-color="primary"
 								tag="h5"
 								icon-position="start"
-								text="Reply within 24 hours" />
+								text="Reponse dans l'heure" />
 						</div>
 						<div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
 							<CommonsTitle
@@ -45,13 +45,13 @@
 								icon-position="start"
 								class="mb-4"
 								tag="h5"
-								text="24 hrs telephone support" />
+								text="Support toujours disponible" />
 						</div>
 					</div>
 					<CommonsText
 						tag="p"
 						class="mb-4"
-						text=" Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus sed et. Takimata takimata sanctus sed." />
+						text="Que vous soyez un particulier, un groupe de personne et que vous recherchez une personne pour votre mission, on a l'équipe qui vous correspond" />
 					<div
 						class="d-flex align-items-center mt-2 wow zoomIn"
 						data-wow-delay="0.6s">
@@ -61,10 +61,7 @@
 							<i class="fa fa-phone-alt text-white"></i>
 						</div>
 						<div class="ps-4">
-							<CommonsTitle
-								tag="h5"
-								class="mb-2"
-								text="Call to ask any question" />
+							<CommonsTitle tag="h5" class="mb-2" text="Joindre" />
 							<CommonsTitle
 								tag="h4"
 								class="text-primary mb-0"

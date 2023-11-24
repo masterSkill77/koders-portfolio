@@ -26,22 +26,22 @@
 					<input
 						type="text"
 						class="form-control bg-light border-0"
-						placeholder="Your Name"
+						placeholder="Votre nom"
 						style="height: 55px" />
 				</div>
 				<div class="col-12">
 					<input
 						type="email"
 						class="form-control bg-light border-0"
-						placeholder="Your Email"
+						placeholder="Votre Email"
 						style="height: 55px" />
 				</div>
 				<div class="col-12">
 					<select class="form-select bg-light border-0" style="height: 55px">
-						<option selected>Select A Service</option>
-						<option value="1">Service 1</option>
-						<option value="2">Service 2</option>
-						<option value="3">Service 3</option>
+						<option selected>Choisissez votre service</option>
+						<option value="site_web">Développement de site web</option>
+						<option value="2">Développement d'application mobile</option>
+						<option value="3">Conception d'une nouvelle SI</option>
 					</select>
 				</div>
 				<div class="col-12">
@@ -51,9 +51,7 @@
 						placeholder="Message"></textarea>
 				</div>
 				<div class="col-12">
-					<button class="btn btn-dark w-100 py-3" type="submit">
-						Request A Quote
-					</button>
+					<button class="btn btn-dark w-100 py-3" type="submit">Envoyer</button>
 				</div>
 			</div>
 		</form>

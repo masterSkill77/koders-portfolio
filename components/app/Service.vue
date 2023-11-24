@@ -13,6 +13,15 @@
 			y: -200,
 			opacity: 0,
 		});
+
+		gsap.from('.zoomIn', {
+			duration: 1,
+			scale: 0.5,
+			scrollTrigger: {
+				trigger: '#service-container',
+				toggleActions: 'restart restart restart resume',
+			},
+		});
 	}
 </script>
 <template>
@@ -23,14 +32,12 @@
 				style="max-width: 600px">
 				<CommonsTitle
 					class="fw-bold text-primary text-uppercase"
-					text="Our Services"
+					text="Nos Services"
 					tag="h5" />
-				<CommonsTitle
-					tag="h1"
-					text="Custom IT Solutions for Your Successful Business" />
+				<CommonsTitle tag="h1" text="Prêt à vous lancer avec nous ?" />
 			</div>
 			<div class="row g-5">
-				<div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+				<div class="col-lg-4 col-md-6 wow zoomIn">
 					<div
 						class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
 						<div class="service-icon">
@@ -49,7 +56,7 @@
 					</div>
 				</div>
 
-				<div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+				<div class="col-lg-4 col-md-6 wow zoomIn">
 					<div
 						class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
 						<div class="service-icon">
@@ -65,7 +72,7 @@
 					</div>
 				</div>
 
-				<div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+				<div class="col-lg-4 col-md-6 wow zoomIn">
 					<div
 						class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
 						<div class="service-icon">
@@ -81,7 +88,7 @@
 					</div>
 				</div>
 
-				<div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+				<div class="col-lg-4 col-md-6 wow zoomIn">
 					<div
 						class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
 						<div class="service-icon">
@@ -97,7 +104,7 @@
 					</div>
 				</div>
 
-				<div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+				<div class="col-lg-4 col-md-6 wow zoomIn">
 					<div
 						class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
 						<div class="service-icon">
@@ -113,7 +120,7 @@
 					</div>
 				</div>
 
-				<div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+				<div class="col-lg-4 col-md-6 wow zoomIn">
 					<div
 						class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
 						<div class="service-icon">
