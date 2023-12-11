@@ -45,26 +45,27 @@
 							</div>
 							<div
 								class="link-animated d-flex flex-column justify-content-start">
-								<a class="text-light mb-2" href="#"
-									><i class="bi bi-arrow-right text-primary me-2"></i>Home</a
-								>
-								<a class="text-light mb-2" href="#"
-									><i class="bi bi-arrow-right text-primary me-2"></i>About
-									</a
-								>
-								<a class="text-light mb-2" href="#" @click="navigatetoServices"
-									><i class="bi bi-arrow-right text-primary me-2"></i>
-									Services</a
-								>
 								
-								<a class="text-light mb-2" href="#"
-									><i class="bi bi-arrow-right text-primary me-2"></i>Portfolio
-									</a
-								>
-								<a class="text-light" href="#" @click="navigateToContact"
-									><i class="bi bi-arrow-right text-primary me-2"></i>Contact
-									</a
-								>
+								<NuxtLink to="/" class="text-light mb-2" >
+									<i class="bi bi-arrow-right text-primary me-2"></i>
+									Home
+								</NuxtLink>
+								<NuxtLink to="/" class="text-light mb-2" >
+									<i class="bi bi-arrow-right text-primary me-2"></i>
+									About
+								</NuxtLink>
+								<NuxtLink to="/services" class="text-light mb-2" >
+									<i class="bi bi-arrow-right text-primary me-2"></i>
+									Services
+								</NuxtLink>
+								<NuxtLink to="/" class="text-light mb-2" >
+									<i class="bi bi-arrow-right text-primary me-2"></i>
+									Portfolio
+								</NuxtLink>
+								<NuxtLink to="/contact" class="text-light mb-2" >
+									<i class="bi bi-arrow-right text-primary me-2"></i>
+									Contact
+								</NuxtLink>   
 							</div>
 						</div>
 						<div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
@@ -105,17 +106,3 @@
 		</div>
 	</div>
 </template>
-
-<script>
-	export default {
-		methods: {
-			navigatetoServices() {
-				this.$router.push('/services');
-			},
-			navigateToContact()
-			{
-				this.$router.push('/contact');
-			}
-		}
-	}
-</script>
