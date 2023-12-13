@@ -34,6 +34,30 @@
 			duration: 0.7,
 		});
 	}
+
+
+	const teamMembers = ref([
+		 {
+			name: "RAJAONARISON Clairmont",
+			designation: "Développeur Full-Stack",
+			image: "/img/clairmont.jpg"
+		 },
+		 {
+			name: "MAHITSILAZA Fabriola",
+			designation: "Développeur Full-Stack",
+			image: "/img/Oskar.jpg"
+		 },
+		 {
+			name: "RANDRIANANTENAINA Tojonjanahary",
+			designation: "Développeur Full-Stack",
+			image: "/img/Tojo.jpg"
+		 },
+		 {
+			name: "RAENINOROARISON Osmin",
+			designation: "Développeur Full-Stack",
+			image: "/img/Osmin.jpg"
+		 }, 
+	])
 </script>
 
 <template>
@@ -52,14 +76,8 @@
 					text="Des professionnels, des talents rares, une équipe au complet" />
 			</div>
 			<div class="row g-5" id="teams-section">
-				<div class="col-lg-4" id="card-1">
-					<CommonsTeamsCard />
-				</div>
-				<div class="col-lg-4" id="card-2">
-					<CommonsTeamsCard />
-				</div>
-				<div class="col-lg-4" id="card-3">
-					<CommonsTeamsCard />
+				<div class="col-lg-4" id="" v-for="member in teamMembers" :key="member.name">
+					<CommonsTeamsCard :name="member.name" :designation="member.designation" :image="member.image" />
 				</div>
 			</div>
 		</div>

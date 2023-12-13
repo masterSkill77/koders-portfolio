@@ -1,7 +1,14 @@
+<script setup>
+	const { title, description } = defineProps({
+		name: { type: String, required: false },
+		designation: { type: String, required: false },
+		image: { type: String, required: false}
+	});
+</script>
 <template>
 	<div class="team-item bg-light rounded overflow-hidden">
 		<div class="team-img position-relative overflow-hidden">
-			<img class="img-fluid w-100" src="/img/clairmont.jpg" loading="lazy" alt="" />
+			<img class="img-fluid w-200 h-200" :src="image" loading="lazy" alt="" />
 			<div class="team-social">
 				<a class="btn btn-lg btn-primary btn-lg-square rounded" href=""
 					><i class="fab fa-twitter fw-normal"></i
@@ -18,8 +25,8 @@
 			</div>
 		</div>
 		<div class="text-center py-4">
-			<h4 class="text-primary">Full Name</h4>
-			<p class="text-uppercase m-0">Designation</p>
+			<h4 class="text-primary">{{ name }}</h4>
+			<p class="text-uppercase m-0">{{ designation }}</p>
 		</div>
 	</div>
 </template>
