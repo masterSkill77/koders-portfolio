@@ -76,7 +76,7 @@
 					text="Des professionnels, des talents rares, une équipe au complet" />
 			</div>
 			<div class="row g-5" id="teams-section">
-				<div class="col-lg-4" id="" v-for="member in teamMembers" :key="member.name">
+				<div class="col-lg-3" id="" v-for="member in teamMembers" :key="member.name">
 					<CommonsTeamsCard :name="member.name" :designation="member.designation" :image="member.image" />
 				</div>
 			</div>

@@ -30,3 +30,10 @@
 		</div>
 	</div>
 </template>
+<!-- 
+<style setup() {
+	img.img-fluid{
+		height: 100% !important;
+	}
+}>
+</style> -->
