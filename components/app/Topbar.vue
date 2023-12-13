@@ -5,8 +5,8 @@
 			<div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
 				<div class="d-inline-flex align-items-center" style="height: 45px">
 					<small class="me-3 text-light"
-						><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York,
-						USA</small
+						><i class="fa fa-map-marker-alt me-2"></i>LOT 116-E/3708 Tsaramandroso FIANARANTSOA 301
+						</small
 					>
 					<small class="me-3 text-light"
 						><i class="fa fa-phone-alt me-2"></i>+261 34 68 047 17</small

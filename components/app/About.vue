@@ -112,7 +112,7 @@
 							animation-delay: 0.9s;
 							animation-name: none;
 						"
-						>Request A Quote</a
+						>Demande un Devis</a
 					>
 				</div>
 			</div>

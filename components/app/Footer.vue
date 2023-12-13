@@ -13,7 +13,7 @@
 							</div>
 							<div class="d-flex mb-2">
 								<i class="bi bi-geo-alt text-primary me-2"></i>
-								<p class="mb-0">123 Street, New York, USA</p>
+								<p class="mb-0">LOT 116-E/3708 Tsaramandroso FIANARANTSOA</p>
 							</div>
 							<div class="d-flex mb-2">
 								<i class="bi bi-envelope-open text-primary me-2"></i>
@@ -48,11 +48,11 @@
 								
 								<NuxtLink to="/" class="text-light mb-2" >
 									<i class="bi bi-arrow-right text-primary me-2"></i>
-									Home
+									Accueil
 								</NuxtLink>
 								<NuxtLink to="/" class="text-light mb-2" >
 									<i class="bi bi-arrow-right text-primary me-2"></i>
-									About
+									A Propos
 								</NuxtLink>
 								<NuxtLink to="/services" class="text-light mb-2" >
 									<i class="bi bi-arrow-right text-primary me-2"></i>
