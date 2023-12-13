@@ -8,7 +8,7 @@
 <template>
 	<div class="team-item bg-light rounded overflow-hidden">
 		<div class="team-img position-relative overflow-hidden">
-			<img class="img-fluid w-200 h-200" :src="image" loading="lazy" alt="" />
+			<img class="img-fluid w-100" :src="image" loading="lazy" alt="" />
 			<div class="team-social">
 				<a class="btn btn-lg btn-primary btn-lg-square rounded" href=""
 					><i class="fab fa-twitter fw-normal"></i
