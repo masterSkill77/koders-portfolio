@@ -1,12 +1,5 @@
 <template>
-	<div
-		class="container-fluid py-5 wow fadeInUp"
-		data-wow-delay="0.1s"
-		style="
-			visibility: visible;
-			animation-delay: 0.1s;
-			animation-name: fadeInUp;
-		">
+	<div class="container-fluid py-5">
 		<div class="container py-5">
 			<div class="row g-5">
 				<div class="col-lg-5" style="min-height: 500px">
@@ -33,14 +26,7 @@
 						class="mb-4"
 						text="Koders est une jeune startup qui fait son petit bout de chemin dans le monde de l'IT. Composé de 6 ingénieurs en informatique, sortie de la plus grande école du pays, nous avons décider de bâtir ensemble pour l'avenir, et d'offrir notre expertise au service du quotidien." />
 					<div class="row g-0 mb-3">
-						<div
-							class="col-sm-6 wow zoomIn"
-							data-wow-delay="0.2s"
-							style="
-								visibility: visible;
-								animation-delay: 0.2s;
-								animation-name: zoomIn;
-							">
+						<div class="col-sm-6">
 							<CommonsTitle
 								class="mb-3"
 								tag="h5"
@@ -57,14 +43,7 @@
 								icon-color="primary"
 								icon-position="start" />
 						</div>
-						<div
-							class="col-sm-6 wow zoomIn"
-							data-wow-delay="0.4s"
-							style="
-								visibility: visible;
-								animation-delay: 0.4s;
-								animation-name: zoomIn;
-							">
+						<div class="col-sm-6">
 							<CommonsTitle
 								class="mb-3"
 								tag="h5"
@@ -82,9 +61,7 @@
 								icon-position="start" />
 						</div>
 					</div>
-					<div
-						class="d-flex align-items-center mb-4 wow fadeIn"
-						data-wow-delay="0.6s">
+					<div class="d-flex align-items-center mb-4">
 						<div
 							id="phone-container"
 							class="d-flex align-items-center justify-content-center rounded"
@@ -103,16 +80,10 @@
 						</div>
 					</div>
 					<a
-						href="/"
-						class="btn btn-primary py-3 px-5 mt-3 wow zoomIn"
-						data-wow-delay="0.9s"
+						href="/contact"
+						class="btn btn-primary py-3 px-5 mt-3"
 						id="request_quote"
-						style="
-							visibility: hidden;
-							animation-delay: 0.9s;
-							animation-name: none;
-						"
-						>Request A Quote</a
+						>Demander devis</a
 					>
 				</div>
 			</div>
@@ -122,41 +93,43 @@
 <script setup>
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/all';
-	if (process.client) {
-		gsap.registerPlugin(ScrollTrigger);
+	onMounted(() => {
+		if (process.client) {
+			gsap.registerPlugin(ScrollTrigger);
 
-		gsap.from('#image_demo', {
-			ease: 'fade',
-			scrollTrigger: {
-				trigger: '#image_demo',
-				toggleActions: 'restart reverse restart resume',
-			},
-			yoyo: true,
-			opacity: 0,
-			duration: 1,
-			x: -100,
-		});
-		gsap.to('#phone_number', {
-			ease: 'power2.inOut',
-			scrollTrigger: {
-				trigger: '#phone_number',
-				toggleActions: 'restart reverse reverse resume',
-				scrub: true,
-			},
-			opacity: 1,
-			duration: 1,
-			rotate: 360,
-		});
-		gsap.to('#phone-container', {
-			ease: 'fade',
-			scrollTrigger: {
-				trigger: '#phone-container',
-				toggleActions: 'restart reverse reverse resume',
-				scrub: true,
-			},
-			backgroundColor: '#142023',
-			opacity: 1,
-			duration: 1,
-		});
-	}
+			gsap.from('#image_demo', {
+				ease: 'fade',
+				scrollTrigger: {
+					trigger: '#image_demo',
+					toggleActions: 'restart reverse restart resume',
+				},
+				yoyo: true,
+				opacity: 0,
+				duration: 1,
+				x: -100,
+			});
+			gsap.to('#phone_number', {
+				ease: 'power2.inOut',
+				scrollTrigger: {
+					trigger: '#phone_number',
+					toggleActions: 'restart reverse reverse resume',
+					scrub: true,
+				},
+				opacity: 1,
+				duration: 1,
+				rotate: 360,
+			});
+			gsap.to('#phone-container', {
+				ease: 'fade',
+				scrollTrigger: {
+					trigger: '#phone-container',
+					toggleActions: 'restart reverse reverse resume',
+					scrub: true,
+				},
+				backgroundColor: '#142023',
+				opacity: 1,
+				duration: 1,
+			});
+		}
+	});
 </script>

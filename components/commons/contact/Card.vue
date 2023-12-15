@@ -1,25 +1,27 @@
 <script setup>
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/all';
-	if (process.client) {
-		gsap.registerPlugin(ScrollTrigger);
-		gsap.from('#card-contact', {
-			ease: 'fade',
-			scrollTrigger: {
-				trigger: '#card-contact',
-				toggleActions: 'restart pause pause resume',
-			},
-			duration: 1,
-			scale: 0.5,
-			opacity: 0,
-		});
-	}
+
+	onMounted(() => {
+		if (process.client) {
+			gsap.registerPlugin(ScrollTrigger);
+			gsap.from('#card-contact', {
+				ease: 'fade',
+				scrollTrigger: {
+					trigger: '#card-contact',
+					toggleActions: 'restart pause pause resume',
+				},
+				duration: 1,
+				scale: 0.5,
+				opacity: 0,
+			});
+		}
+	});
 </script>
 <template>
 	<div
-		class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn"
-		id="card-contact"
-		data-wow-delay="0.9s">
+		class="bg-primary rounded h-100 d-flex align-items-center p-5"
+		id="card-contact">
 		<form>
 			<div class="row g-3">
 				<div class="col-xl-12">

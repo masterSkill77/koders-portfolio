@@ -1,28 +1,28 @@
 <script setup>
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/all';
-	if (process.client) {
-		gsap.registerPlugin(ScrollTrigger);
-		gsap.from('#service-container', {
-			ease: 'fade',
-			scrollTrigger: {
-				trigger: '#service-container',
-				toggleActions: 'restart pause pause resume',
-			},
-			duration: 1,
-			y: -200,
-			opacity: 0,
-		});
+	gsap.registerPlugin(ScrollTrigger);
+	onMounted(() => {
+		if (process.client) {
+			const tl = gsap.timeline({
+				scrollTrigger: {
+					trigger: '#service-container',
+					toggleActions: 'restart pause resume reset',
+				},
+			});
+			tl.from('#service-container', {
+				ease: 'fade',
+				duration: 1,
+				y: -200,
+				opacity: 0,
+			});
 
-		gsap.from('.zoomIn', {
-			duration: 1,
-			scale: 0.5,
-			scrollTrigger: {
-				trigger: '#service-container',
-				toggleActions: 'restart restart restart resume',
-			},
-		});
-	}
+			tl.from('.zoomIn', {
+				duration: 1,
+				scale: 0.5,
+			});
+		}
+	});
 </script>
 <template>
 	<div class="container-fluid">
@@ -37,7 +37,7 @@
 				<CommonsTitle tag="h1" text="Prêt à vous lancer avec nous ?" />
 			</div>
 			<div class="row g-5">
-				<div class="col-lg-4 col-md-6 wow zoomIn">
+				<div class="col-lg-4 col-md-6 zoomIn">
 					<div
 						class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
 						<div class="service-icon">
@@ -56,7 +56,7 @@
 					</div>
 				</div>
 
-				<div class="col-lg-4 col-md-6 wow zoomIn">
+				<div class="col-lg-4 col-md-6 zoomIn">
 					<div
 						class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
 						<div class="service-icon">
@@ -72,7 +72,7 @@
 					</div>
 				</div>
 
-				<div class="col-lg-4 col-md-6 wow zoomIn">
+				<div class="col-lg-4 col-md-6 zoomIn">
 					<div
 						class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
 						<div class="service-icon">
@@ -88,7 +88,7 @@
 					</div>
 				</div>
 
-				<div class="col-lg-4 col-md-6 wow zoomIn">
+				<div class="col-lg-4 col-md-6 zoomIn">
 					<div
 						class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
 						<div class="service-icon">
@@ -104,7 +104,7 @@
 					</div>
 				</div>
 
-				<div class="col-lg-4 col-md-6 wow zoomIn">
+				<div class="col-lg-4 col-md-6 zoomIn">
 					<div
 						class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
 						<div class="service-icon">
@@ -120,7 +120,7 @@
 					</div>
 				</div>
 
-				<div class="col-lg-4 col-md-6 wow zoomIn">
+				<div class="col-lg-4 col-md-6 zoomIn">
 					<div
 						class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
 						<div class="service-icon">

@@ -2,15 +2,7 @@
 	<div class="container-fluid facts py-5 pt-lg-0" id="facts">
 		<div class="container py-5 pt-lg-0">
 			<div class="row gx-0">
-				<div
-					class="col-lg-4 wow zoomIn"
-					data-wow-delay="0.1s"
-					id="happy_client"
-					style="
-						visibility: visible;
-						animation-delay: 0.1s;
-						animation-name: zoomIn;
-					">
+				<div class="col-lg-4" id="happy_client">
 					<div
 						class="bg-primary shadow d-flex align-items-center justify-content-center p-4"
 						style="height: 150px">
@@ -24,15 +16,7 @@
 						</div>
 					</div>
 				</div>
-				<div
-					class="col-lg-4 wow zoomIn"
-					data-wow-delay="0.3s"
-					id="project_done"
-					style="
-						visibility: visible;
-						animation-delay: 0.3s;
-						animation-name: zoomIn;
-					">
+				<div class="col-lg-4" id="project_done">
 					<div
 						class="bg-light shadow d-flex align-items-center justify-content-center p-4"
 						style="height: 150px">
@@ -46,15 +30,7 @@
 						</div>
 					</div>
 				</div>
-				<div
-					class="col-lg-4 wow zoomIn"
-					id="win_awards"
-					data-wow-delay="0.6s"
-					style="
-						visibility: visible;
-						animation-delay: 0.6s;
-						animation-name: zoomIn;
-					">
+				<div class="col-lg-4" id="win_awards">
 					<div
 						class="bg-primary shadow d-flex align-items-center justify-content-center p-4"
 						style="height: 150px">

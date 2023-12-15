@@ -5,23 +5,25 @@
 	import { TextPlugin } from 'gsap/TextPlugin';
 	gsap.registerPlugin(ScrollTrigger, Flip, TextPlugin); // Register plugin first
 
-	if (process.client) {
-		gsap.to('#text-animate', 4, {
-			text: "Une entreprise jeune, dynamique &amp; Innovante dans le domaine de l'IT",
-			ease: 'none',
-			scrollTrigger: {
-				trigger: '#text-animate',
-				toggleActions: 'restart restart restart restart',
-			},
-		});
-		// Créer une timeline GSAP
-		const tl = gsap.timeline({
-			scrollTrigger: {
-				trigger: '#text-animate',
-				toggleActions: 'restart restart resume restart',
-			},
-		});
-	}
+	onMounted(() => {
+		if (process.client) {
+			gsap.to('#text-animate', 4, {
+				text: "Une entreprise jeune, dynamique &amp; Innovante dans le domaine de l'IT",
+				ease: 'none',
+				scrollTrigger: {
+					trigger: '#text-animate',
+					toggleActions: 'restart restart restart restart',
+				},
+			});
+			// Créer une timeline GSAP
+			const tl = gsap.timeline({
+				scrollTrigger: {
+					trigger: '#text-animate',
+					toggleActions: 'restart restart resume restart',
+				},
+			});
+		}
+	});
 </script>
 
 <template>

@@ -1,19 +1,22 @@
 <script setup>
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/all';
-	if (process.client) {
-		gsap.registerPlugin(ScrollTrigger);
-		gsap.from('#contact-container', {
-			ease: 'fade',
-			scrollTrigger: {
-				trigger: '#contact-container',
-				toggleActions: 'restart pause pause resume',
-			},
-			duration: 1,
-			x: -500,
-			opacity: 0,
-		});
-	}
+
+	onMounted(() => {
+		if (process.client) {
+			gsap.registerPlugin(ScrollTrigger);
+			gsap.from('#contact-container', {
+				ease: 'fade',
+				scrollTrigger: {
+					trigger: '#contact-container',
+					toggleActions: 'restart pause pause resume',
+				},
+				duration: 1,
+				x: -500,
+				opacity: 0,
+			});
+		}
+	});
 </script>
 <template>
 	<div class="container-fluid py-5">
@@ -30,7 +33,7 @@
 							tag="h1" />
 					</div>
 					<div class="row gx-3">
-						<div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+						<div class="col-sm-6">
 							<CommonsTitle
 								icon="reply"
 								icon-color="primary"
@@ -38,7 +41,7 @@
 								icon-position="start"
 								text="Reponse dans l'heure" />
 						</div>
-						<div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
+						<div class="col-sm-6">
 							<CommonsTitle
 								icon="phone-alt"
 								icon-color="primary"
@@ -52,9 +55,7 @@
 						tag="p"
 						class="mb-4"
 						text="Que vous soyez un particulier, un groupe de personne et que vous recherchez une personne pour votre mission, on a l'équipe qui vous correspond" />
-					<div
-						class="d-flex align-items-center mt-2 wow zoomIn"
-						data-wow-delay="0.6s">
+					<div class="d-flex align-items-center mt-2">
 						<div
 							class="bg-primary d-flex align-items-center justify-content-center rounded"
 							style="width: 60px; height: 60px">

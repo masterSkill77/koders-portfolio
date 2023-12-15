@@ -18,7 +18,7 @@
 		{
 			id: 3,
 			name: 'RAJAONARISON Clairmont',
-			designation: 'TEST',
+			designation: 'Co-fondateur | Développeur Full-Stack',
 			image: '/img/clairmont.jpg',
 		},
 		{
@@ -42,7 +42,6 @@
 				scrollTrigger: {
 					trigger: '#teams-section',
 					toggleActions: 'restart pause resume reset',
-					markers: true,
 				},
 			});
 			timeline.from('#teams-title', {
