@@ -2,7 +2,7 @@
 	const { title, description } = defineProps({
 		name: { type: String, required: false },
 		designation: { type: String, required: false },
-		image: { type: String, required: false}
+		image: { type: String, required: false },
 	});
 </script>
 <template>
@@ -24,16 +24,19 @@
 				></a>
 			</div>
 		</div>
-		<div class="text-center py-4">
+		<div class="text-center p-2">
 			<h4 class="text-primary">{{ name }}</h4>
 			<p class="text-uppercase m-0">{{ designation }}</p>
 		</div>
 	</div>
 </template>
-<!-- 
-<style setup() {
-	img.img-fluid{
-		height: 100% !important;
+
+<style scoped>
+	img.img-fluid {
+		height: 350px !important;
+		object-fit: cover;
 	}
-}>
-</style> -->
+	.team-item {
+		height: 500px !important;
+	}
+</style>
