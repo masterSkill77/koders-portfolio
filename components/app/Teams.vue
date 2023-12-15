@@ -12,7 +12,7 @@
 		{
 			id: 2,
 			name: 'RANDRIANANTENAINA Tojonjanahary',
-			designation: 'Co-fondateur | Développeur Full-Stack',
+			designation: 'CTO | Co-fondateur | Développeur Full-Stack',
 			image: '/img/Tojo.jpg',
 		},
 		{
