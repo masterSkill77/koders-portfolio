@@ -2,65 +2,67 @@
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/all';
 
-	if (process.client) {
-		gsap.registerPlugin(ScrollTrigger);
-		const timeline = gsap.timeline({
-			smoothChildTiming: true,
-			scrollTrigger: {
-				trigger: '#teams-section',
-				toggleActions: 'restart pause restart resume',
-			},
-		});
-		timeline.from('#teams-title', {
-			opacity: 0,
-			x: 500,
-			duration: 0.7,
-		});
-		timeline.from('#card-1', {
-			opacity: 0,
-			scale: 0.7,
-			duration: 0.7,
-		});
-
-		timeline.from('#card-2', {
-			opacity: 0,
-			scale: 0.7,
-			duration: 0.7,
-		});
-
-		timeline.from('#card-3', {
-			opacity: 0,
-			scale: 0.7,
-			duration: 0.7,
-		});
-	}
-
 	const teamMembers = ref([
 		{
+			id: 1,
 			name: 'MAHITSILAZA Fabriola',
 			designation: 'CEO | Co-fondateur | Développeur Full-Stack',
 			image: '/img/Oskar.jpg',
 		},
 		{
+			id: 2,
 			name: 'RANDRIANANTENAINA Tojonjanahary',
 			designation: 'Co-fondateur | Développeur Full-Stack',
 			image: '/img/Tojo.jpg',
 		},
 		{
+			id: 3,
 			name: 'RAJAONARISON Clairmont',
-			designation: 'Co-fondateur | Développeur Full-Stack',
+			designation: 'TEST',
 			image: '/img/clairmont.jpg',
 		},
 		{
+			id: 4,
 			name: 'RAENINOROARISON Osmin',
 			designation: 'Co-fondateur | Développeur Full-Stack',
 			image: '/img/Osmin.jpg',
 		},
 	]);
+	gsap.registerPlugin(ScrollTrigger);
+
+	onMounted(() => {
+		console.log('mounted');
+		launchAnimation();
+	});
+
+	const launchAnimation = () => {
+		if (process.client) {
+			const timeline = gsap.timeline({
+				smoothChildTiming: true,
+				scrollTrigger: {
+					trigger: '#teams-section',
+					toggleActions: 'restart pause resume reset',
+					markers: true,
+				},
+			});
+			timeline.from('#teams-title', {
+				opacity: 0,
+				x: 500,
+				duration: 0.7,
+			});
+			teamMembers.value.forEach((member) => {
+				timeline.from('#card-' + member.id, {
+					opacity: 0,
+					scale: 0.7,
+					duration: 0.7,
+				});
+			});
+		}
+	};
 </script>
 
 <template>
-	<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+	<div class="container-fluid py-5">
 		<div class="container py-5">
 			<div
 				id="teams-title"
@@ -77,8 +79,8 @@
 			<div class="row g-5" id="teams-section">
 				<div
 					class="col-lg-3"
-					id=""
 					v-for="member in teamMembers"
+					:id="`card-${member.id}`"
 					:key="member.name">
 					<CommonsTeamsCard
 						:name="member.name"
