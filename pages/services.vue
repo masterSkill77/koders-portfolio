@@ -1,13 +1,32 @@
 <script setup>
 	import { useLoading } from 'stores/useLoading';
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/all';
+	gsap.registerPlugin(ScrollTrigger);
 	useLoading().setLoading(true);
 	setTimeout(() => {
 		useLoading().setLoading(false);
 	}, 1000);
+
+	onMounted(() => {
+		if (process.client) {
+			gsap.from('.container-services', {
+				ease: 'fade',
+				scrollTrigger: {
+					trigger: '.container-services',
+					toggleActions: 'restart pause resume reset',
+				},
+				yoyo: true,
+				opacity: 0,
+				duration: 1,
+				x: -200,
+			});
+		}
+	});
 </script>
 
 <template>
-	<div class="container-fluid py-5 wow fadeInUp">
+	<div class="container-fluid py-5 container-services">
 		<div class="container py-5">
 			<div
 				class="section-title text-center position-relative pb-3 mb-5 mx-auto"
@@ -22,7 +41,7 @@
 			<div class="row g-5">
 				<div class="col-lg-4">
 					<div class="row g-5">
-						<div class="col-12 wow zoomIn">
+						<div class="col-12">
 							<div
 								class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
 								style="width: 60px; height: 60px">
@@ -34,7 +53,7 @@
 								vous mettre au centre de l'attention
 							</p>
 						</div>
-						<div class="col-12 wow zoomIn">
+						<div class="col-12">
 							<div
 								class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
 								style="width: 60px; height: 60px">
@@ -49,17 +68,17 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 wow zoomIn" style="min-height: 350px">
+				<div class="col-lg-4" style="min-height: 350px">
 					<div class="position-relative h-100">
 						<img
-							class="position-absolute w-100 h-100 rounded wow zoomIn"
+							class="position-absolute w-100 h-100 rounded"
 							src="/img/team.png"
 							style="object-fit: cover" />
 					</div>
 				</div>
 				<div class="col-lg-4">
 					<div class="row g-5">
-						<div class="col-12 wow zoomIn">
+						<div class="col-12">
 							<div
 								class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
 								style="width: 60px; height: 60px">
@@ -72,7 +91,7 @@
 								ensemble.
 							</p>
 						</div>
-						<div class="col-12 wow zoomIn">
+						<div class="col-12">
 							<div
 								class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
 								style="width: 60px; height: 60px">
