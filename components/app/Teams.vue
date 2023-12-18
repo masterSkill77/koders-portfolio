@@ -6,26 +6,30 @@
 		{
 			id: 1,
 			name: 'MAHITSILAZA Fabriola',
-			designation: 'CEO | Co-fondateur | Développeur Full-Stack',
-			image: '/img/Oskar.jpg',
+			function: 'CEO | Co-fondateur | Développeur Full-Stack',
+			photo: '/img/Oskar.jpg',
+			editor: "Hello"
 		},
 		{
 			id: 2,
 			name: 'RANDRIANANTENAINA Tojonjanahary',
-			designation: 'CTO | Co-fondateur | Développeur Full-Stack',
-			image: '/img/Tojo.jpg',
+			function: 'CTO | Co-fondateur | Développeur Full-Stack',
+			photo: '/img/Tojo.jpg',
+			editor: "Hello"
 		},
 		{
 			id: 3,
 			name: 'RAJAONARISON Clairmont',
-			designation: 'Co-fondateur | Développeur Full-Stack',
-			image: '/img/clairmont.jpg',
+			function: 'Co-fondateur | Développeur Full-Stack',
+			photo: '/img/clairmont.jpg',
+			editor: "Hello"
 		},
 		{
 			id: 4,
 			name: 'RAENINOROARISON Osmin',
-			designation: 'Co-fondateur | Développeur Full-Stack',
-			image: '/img/Osmin.jpg',
+			function: 'Co-fondateur | Développeur Full-Stack',
+			photo: '/img/Osmin.jpg',
+			editor: "Hello"
 		},
 	]);
 	gsap.registerPlugin(ScrollTrigger);
@@ -83,8 +87,8 @@
 					:key="member.name">
 					<CommonsTeamsCard
 						:name="member.name"
-						:designation="member.designation"
-						:image="member.image" />
+						:designation="member.function"
+						:image="member.photo" />
 				</div>
 			</div>
 		</div>
