@@ -7,6 +7,8 @@
 		const data = await useFetchData('/testimonials');
 		testimonials.value = data;
 	});
+
+	const slidePerView = 4;
 </script>
 <template>
 	<div class="container-fluid py-5">
@@ -19,14 +21,16 @@
 			</div>
 			<div class="testimonial-carousel">
 				<swiper-container
-					slides-per-view="3"
-					:autoplay="{ delay: 5000 }"
+					v-if="testimonials.length > slidePerView"
+					:slides-per-view="slidePerView"
+					:autoplay="{ delay: 2000 }"
 					speed="2000"
 					loop="true">
 					<swiper-slide
 						v-for="testimonial in testimonials"
 						:key="testimonial.id"
-						class="testimonial-item">
+						class="testimonial-item"
+						style="justify-content: center !important">
 						<div class="testimonial__item">
 							<div
 								class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
@@ -45,14 +49,41 @@
 						</div>
 					</swiper-slide>
 				</swiper-container>
+				<div class="row justify-content-center" v-else>
+					<div
+						v-for="testimonial in testimonials"
+						:key="testimonial.id"
+						class="testimonial-item"
+						style="justify-content: center !important">
+						<div class="testimonial__item">
+							<div
+								class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+								<img
+									class="img-fluid rounded"
+									:src="testimonial.photo"
+									style="width: 60px; height: 60px; object-fit: cover" />
+								<div class="ps-4">
+									<h4 class="text-primary mb-1">{{ testimonial.client }}</h4>
+									<small class="text-uppercase">{{ testimonial.title }}</small>
+								</div>
+							</div>
+							<div
+								class="pt-4 pb-5 px-5"
+								v-html="testimonial.description"></div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </template>
-<style scoped class="testimonial-item">
+<style scoped>
 	.testimonial-item {
 		width: 400px !important;
 		margin: 20px !important;
 		box-shadow: #0000004a 6px 5px 20px;
+	}
+	.swiper-wrapper {
+		justify-content: center !important;
 	}
 </style>
