@@ -1,41 +1,10 @@
 <script setup>
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/all';
-
-	const teamMembers = ref([
-		{
-			id: 1,
-			name: 'MAHITSILAZA Fabriola',
-			function: 'CEO | Co-fondateur | Développeur Full-Stack',
-			photo: '/img/Oskar.jpg',
-			editor: "Hello"
-		},
-		{
-			id: 2,
-			name: 'RANDRIANANTENAINA Tojonjanahary',
-			function: 'CTO | Co-fondateur | Développeur Full-Stack',
-			photo: '/img/Tojo.jpg',
-			editor: "Hello"
-		},
-		{
-			id: 3,
-			name: 'RAJAONARISON Clairmont',
-			function: 'Co-fondateur | Développeur Full-Stack',
-			photo: '/img/clairmont.jpg',
-			editor: "Hello"
-		},
-		{
-			id: 4,
-			name: 'RAENINOROARISON Osmin',
-			function: 'Co-fondateur | Développeur Full-Stack',
-			photo: '/img/Osmin.jpg',
-			editor: "Hello"
-		},
-	]);
 	gsap.registerPlugin(ScrollTrigger);
-
-	onMounted(() => {
-		console.log('mounted');
+	const data = await useFetchData('/teams');
+	const teamMembers = ref(data.reverse());
+	onMounted(async () => {
 		launchAnimation();
 	});
 
@@ -87,7 +56,8 @@
 					:key="member.name">
 					<CommonsTeamsCard
 						:name="member.name"
-						:designation="member.function"
+						:designation="member.post"
+						:slogan="member.function"
 						:image="member.photo" />
 				</div>
 			</div>
