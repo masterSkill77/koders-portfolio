@@ -3,11 +3,6 @@
 	import { ScrollTrigger } from 'gsap/all';
 	gsap.registerPlugin(ScrollTrigger);
 	const data = await useFetchData('/teams');
-	const teamMembers = ref(data.reverse());
-	onMounted(async () => {
-		launchAnimation();
-	});
-
 	const launchAnimation = () => {
 		if (process.client) {
 			const timeline = gsap.timeline({
@@ -22,7 +17,7 @@
 				x: 500,
 				duration: 0.7,
 			});
-			teamMembers.value.forEach((member) => {
+			data.forEach((member) => {
 				timeline.from('#card-' + member.id, {
 					opacity: 0,
 					scale: 0.7,
@@ -31,6 +26,9 @@
 			});
 		}
 	};
+	onMounted(async () => {
+		launchAnimation();
+	});
 </script>
 
 <template>
@@ -43,22 +41,24 @@
 				<CommonsTitle
 					tag="h5"
 					class="fw-bold text-primary text-uppercase"
-					text="Nos collaborateurs" />
+					text="Notre équipe" />
 				<CommonsTitle
 					tag="h1"
 					text="Des professionnels, des talents rares, une équipe au complet" />
 			</div>
-			<div class="row g-5" id="teams-section">
-				<div
-					class="col-lg-3"
-					v-for="member in teamMembers"
-					:id="`card-${member.id}`"
-					:key="member.name">
-					<CommonsTeamsCard
-						:name="member.name"
-						:designation="member.post"
-						:slogan="member.function"
-						:image="member.photo" />
+			<div style="display: flex; gap: 10px" id="teams-section">
+				<div>
+					<div
+						class="col-lg-3"
+						v-for="member in data"
+						:id="`card-${member.id}`"
+						:key="member.name">
+						<CommonsTeamsCard
+							:name="member.name"
+							:designation="member.post"
+							:slogan="member.function"
+							:image="member.photo" />
+					</div>
 				</div>
 			</div>
 		</div>

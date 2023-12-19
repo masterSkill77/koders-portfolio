@@ -1,7 +1,7 @@
 <script setup>
-	import { register } from 'swiper/element/bundle';
-	// register Swiper custom elements
-	register();
+	// import { register } from 'swiper/element/bundle';
+	// // register Swiper custom elements
+	// register();
 	const testimonials = ref([]);
 	onMounted(async () => {
 		const data = await useFetchData('/testimonials');

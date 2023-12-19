@@ -11,8 +11,8 @@
 		<AppAbout />
 		<AppService />
 		<AppTeams />
-		<AppTestimonial />
 		<AppTechno />
+		<AppTestimonial />
 		<AppContact />
 	</div>
 </template>
