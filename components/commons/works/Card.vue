@@ -9,7 +9,7 @@
 	<div class="col-md-6 wow slideInUp" data-wow-delay="0.1s">
 		<div class="blog-item bg-light rounded overflow-hidden">
 			<div class="blog-img position-relative overflow-hidden">
-				<img class="img-fluid" src="img/blog-1.jpg" alt="" />
+				<img class="img-fluid" :src="work.photo" alt="" />
 			</div>
 			<div class="p-4">
 				<div class="d-flex mb-3 flex-wrap gap-2">
