@@ -12,7 +12,6 @@
 		<LazyAppService />
 		<LazyAppTestimonial />
 		<LazyAppTechno />
-		<LazyAppTeams />
 		<LazyAppContact />
 	</div>
 </template>
