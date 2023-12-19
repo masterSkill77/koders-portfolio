@@ -9,6 +9,6 @@
 </script>
 <template>
 	<NuxtLayout>
-		<LazyNuxtPage />
+		<NuxtPage />
 	</NuxtLayout>
 </template>

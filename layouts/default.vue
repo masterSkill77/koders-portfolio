@@ -1,15 +1,15 @@
 <template>
 	<Teleport to="body">
 		<div id="circularcursor"></div>
-		<LazyAppSpinner />
-		<LazyAppTopbar />
+		<AppSpinner />
+		<AppTopbar />
 		<div class="container-fluid position-relative p-0">
-			<LazyAppMenu />
-			<LazyAppCarousel />
+			<AppMenu />
+			<AppCarousel />
 		</div>
 
 		<slot />
-		<LazyAppFooter />
-		<LazyCommonsBackTop />
+		<AppFooter />
+		<CommonsBackTop />
 	</Teleport>
 </template>
