@@ -47,8 +47,8 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarCollapse">
 			<div class="navbar-nav ms-auto py-0">
-				<NuxtLink to="/" class="nav-item nav-link">Home</NuxtLink>
-				<NuxtLink to="/" class="nav-item nav-link">About</NuxtLink>
+				<NuxtLink to="/" class="nav-item nav-link">Accueil</NuxtLink>
+				<NuxtLink to="/" class="nav-item nav-link">A Propos</NuxtLink>
 				<NuxtLink to="/services" class="nav-item nav-link">Services</NuxtLink>
 				<NuxtLink to="/portfolio" class="nav-item nav-link">Portfolio</NuxtLink>
 				<NuxtLink to="/contact" class="nav-item nav-link">Contact</NuxtLink>
