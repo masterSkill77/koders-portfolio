@@ -46,19 +46,17 @@
 					tag="h1"
 					text="Des professionnels, des talents rares, une équipe au complet" />
 			</div>
-			<div style="display: flex; gap: 10px" id="teams-section">
-				<div>
-					<div
-						class="col-lg-3"
-						v-for="member in data"
-						:id="`card-${member.id}`"
-						:key="member.name">
-						<CommonsTeamsCard
-							:name="member.name"
-							:designation="member.post"
-							:slogan="member.function"
-							:image="member.photo" />
-					</div>
+			<div class="row gap-1" id="teams-section">
+				<div
+					class="col-lg-3"
+					v-for="member in data"
+					:id="`card-${member.id}`"
+					:key="member.name">
+					<CommonsTeamsCard
+						:name="member.name"
+						:designation="member.post"
+						:slogan="member.function"
+						:image="member.photo" />
 				</div>
 			</div>
 		</div>
