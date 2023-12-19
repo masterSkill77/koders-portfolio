@@ -24,7 +24,7 @@
 					<CommonsText
 						tag="p"
 						class="mb-4"
-						text="Koders est une jeune startup qui fait son petit bout de chemin dans le monde de l'IT. Composé de 6 ingénieurs en informatique, sortie de la plus grande école du pays, nous avons décider de bâtir ensemble pour l'avenir, et d'offrir notre expertise au service du quotidien." />
+						text="Koders est une jeune startup qui fait son petit bout de chemin dans le monde de l'IT. Confondé par 4 ingénieurs en informatique, sortie de la plus grande école du pays, nous avons décider de bâtir ensemble pour l'avenir, et d'offrir notre expertise au service du quotidien." />
 					<div class="row g-0 mb-3">
 						<div class="col-sm-6">
 							<CommonsTitle

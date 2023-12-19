@@ -9,6 +9,7 @@
 	<div>
 		<LazyAppFacts />
 		<LazyAppAbout />
+		<LazyAppCEO />
 		<LazyAppService />
 		<LazyAppTestimonial />
 		<LazyAppTechno />
