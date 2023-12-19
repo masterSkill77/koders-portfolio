@@ -7,12 +7,12 @@
 </script>
 <template>
 	<div>
-		<AppFacts />
-		<AppAbout />
-		<AppService />
-		<AppTeams />
-		<AppTechno />
-		<AppTestimonial />
-		<AppContact />
+		<LazyAppFacts />
+		<LazyAppAbout />
+		<LazyAppService />
+		<LazyAppTeams />
+		<LazyAppTechno />
+		<LazyAppTestimonial />
+		<LazyAppContact />
 	</div>
 </template>
