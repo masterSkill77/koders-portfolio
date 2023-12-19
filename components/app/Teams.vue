@@ -52,7 +52,7 @@
 					tag="h1"
 					text="Des professionnels, des talents rares, une équipe au complet" />
 			</div>
-			<div class="d-flex gap-5 justify-content-center" id="teams-section">
+			<div class="d-flex flex-wrap gap-5 justify-content-center" id="teams-section">
 				<div
 					class="col-lg-3"
 					v-for="member in teamMembers"
