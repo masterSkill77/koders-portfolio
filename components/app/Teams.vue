@@ -3,6 +3,13 @@
 	import { ScrollTrigger } from 'gsap/all';
 	gsap.registerPlugin(ScrollTrigger);
 	const data = await useFetchData('/teams');
+	const teamMembers = ref(data.reverse());
+
+	onMounted(() => {
+		console.log('mounted');
+		launchAnimation();
+	});
+
 	const launchAnimation = () => {
 		if (process.client) {
 			const timeline = gsap.timeline({
@@ -26,9 +33,6 @@
 			});
 		}
 	};
-	onMounted(async () => {
-		launchAnimation();
-	});
 </script>
 
 <template>
@@ -46,19 +50,17 @@
 					tag="h1"
 					text="Des professionnels, des talents rares, une équipe au complet" />
 			</div>
-			<div id="teams-section">
-				<div class="d-flex flex-wrap gap-5">
-					<div
-						class="col-lg-3"
-						v-for="member in data"
-						:id="`card-${member.id}`"
-						:key="member.name">
-						<CommonsTeamsCard
-							:name="member.name"
-							:designation="member.post"
-							:slogan="member.function"
-							:image="member.photo" />
-					</div>
+			<div class="d-flex gap-5 justify-content-center" id="teams-section">
+				<div
+					class="col-lg-3"
+					v-for="member in teamMembers"
+					:id="`card-${member.id}`"
+					:key="member.name">
+					<CommonsTeamsCard
+						:name="member.name"
+						:designation="member.post"
+						:slogan="member.function"
+						:image="member.photo" />
 				</div>
 			</div>
 		</div>
