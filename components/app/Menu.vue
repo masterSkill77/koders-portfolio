@@ -50,6 +50,7 @@
 				<NuxtLink to="/" class="nav-item nav-link">Accueil</NuxtLink>
 				<NuxtLink to="/" class="nav-item nav-link">A Propos</NuxtLink>
 				<NuxtLink to="/services" class="nav-item nav-link">Services</NuxtLink>
+				<NuxtLink to="/teams" class="nav-item nav-link">Équipe</NuxtLink>
 				<NuxtLink to="/portfolio" class="nav-item nav-link">Portfolio</NuxtLink>
 				<NuxtLink to="/contact" class="nav-item nav-link">Contact</NuxtLink>
 			</div>

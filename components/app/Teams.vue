@@ -1,12 +1,13 @@
 <script setup>
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/all';
+	import { useLoading } from '~/stores/useLoading';
 	gsap.registerPlugin(ScrollTrigger);
 	const data = await useFetchData('/teams');
+	useLoading().setLoading(false);
 	const teamMembers = ref(data.reverse());
 
 	onMounted(() => {
-		console.log('mounted');
 		launchAnimation();
 	});
 
