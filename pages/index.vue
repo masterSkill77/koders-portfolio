@@ -10,9 +10,9 @@
 		<LazyAppFacts />
 		<LazyAppAbout />
 		<LazyAppService />
-		<LazyAppTeams />
 		<LazyAppTestimonial />
 		<LazyAppTechno />
+		<LazyAppTeams />
 		<LazyAppContact />
 	</div>
 </template>

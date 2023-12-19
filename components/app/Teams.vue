@@ -4,7 +4,9 @@
 	gsap.registerPlugin(ScrollTrigger);
 	const data = await useFetchData('/teams');
 	const teamMembers = ref(data.reverse());
-	onMounted(async () => {
+
+	onMounted(() => {
+		console.log('mounted');
 		launchAnimation();
 	});
 
@@ -43,12 +45,12 @@
 				<CommonsTitle
 					tag="h5"
 					class="fw-bold text-primary text-uppercase"
-					text="Nos collaborateurs" />
+					text="Notre équipe" />
 				<CommonsTitle
 					tag="h1"
 					text="Des professionnels, des talents rares, une équipe au complet" />
 			</div>
-			<div class="row g-5" id="teams-section">
+			<div class="d-flex gap-5 justify-content-center" id="teams-section">
 				<div
 					class="col-lg-3"
 					v-for="member in teamMembers"
