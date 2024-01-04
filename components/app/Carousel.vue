@@ -44,7 +44,7 @@
 			">
 			<div
 				class="w-100 p-2 d-flex gap-2 justify-content-center text-white align-items-center">
-				<div class="col-md-5" style="min-height: 50%; padding-top: 15%;">
+				<div class="col-md-5 d-flex justify-content-center align-items-center" style="min-height: 50%; padding-top: 8%;">
 					<h1
 						class="display-1 text-white text-center mb-md-4 animated"
 						id="text-animate"
