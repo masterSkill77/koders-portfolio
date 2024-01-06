@@ -1,5 +1,6 @@
 <template>
-	<div class="container-fluid py-5">
+	<div class="container-fluid py-5"
+	style="padding-bottom: 0 !important;">
 		<div class="container py-5">
 			<div class="row g-5">
 				<div class="col-lg-5" style="min-height: 500px">
