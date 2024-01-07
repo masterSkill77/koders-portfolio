@@ -56,7 +56,7 @@
 						<img
 							class="w-100 h-100 rounded"
 							id="image_ceo"
-							style="object-fit: cover"
+							style="object-fit: scale-down"
 							src="/img/ceo_fab.jpg" />
 					</div>
 				</div>
