@@ -1,8 +1,27 @@
 <template>
-	<div class="container-fluid py-5"
-	style="padding-bottom: 0 !important;">
+	<div class="container-fluid py-5" style="padding-bottom: 0 !important">
 		<div class="container py-5">
 			<div class="row g-5">
+				<div class="col-lg-7">
+					<div class="section-title position-relative pb-3 mb-5">
+						<CommonsTitle
+							tag="h3"
+							class="fw-bold text-primary text-uppercase"
+							text="KODERS, une équipe, une fraternité" />
+						<CommonsTitle
+							tag="h1"
+							text="Avant d'être collaborateur, on est avant tout un groupe d'ami" />
+					</div>
+					<CommonsText
+						tag="p"
+						class="mb-4 text-justify"
+						text="Notre équipe chez Koders a tracé un parcours extraordinaire depuis nos débuts modestes jusqu'à devenir une force dynamique dans le monde de la technologie. C'est en rassemblant des esprits innovants et passionnés que nous avons jeté les bases de ce qui allait devenir une communauté unie et créative. Depuis nos premières lignes de code jusqu'aux projets les plus ambitieux, chaque membre de notre équipe a joué un rôle essentiel dans notre progression." />
+					<CommonsText
+						tag="p"
+						class="mb-4 text-justify"
+						text="Au fil des ans, nous avons surmonté des défis, exploité des opportunités et évolué ensemble. Notre histoire est tissée de moments forts, de réussites collectives et d'apprentissages qui ont façonné notre culture d'entreprise. En regardant en arrière, nous constatons avec fierté les projets innovants que nous avons réalisés et les défis que nous avons relevés avec détermination." />
+				</div>
+
 				<div class="col-lg-5" style="min-height: 500px">
 					<div class="position-relative h-100">
 						<img
@@ -12,81 +31,22 @@
 							src="/img/about.jpg" />
 					</div>
 				</div>
-				<div class="col-lg-7">
-					<div class="section-title position-relative pb-3 mb-5">
-						<CommonsTitle
-							tag="h3"
-							class="fw-bold text-primary text-uppercase"
-							text="Qui sommes nous ?" />
-						<CommonsTitle
-							tag="h1"
-							text="Nous sommes une ESN basée à Madagascar" />
-					</div>
+			</div>
+
+			<div class="pt-4">
+				<div class="pt-4 section-title position-relative pb-3 mb-5">
+					<CommonsTitle tag="h1" text="Notre histoire" />
 					<CommonsText
 						tag="p"
-						class="mb-4"
-						text="Koders est une jeune startup qui fait son petit bout de chemin dans le monde de l'IT. Confondé par 4 ingénieurs en informatique, sortie de la plus grande école du pays, nous avons décider de bâtir ensemble pour l'avenir, et d'offrir notre expertise au service du quotidien." />
-					<div class="row g-0 mb-3">
-						<div class="col-sm-6">
-							<CommonsTitle
-								class="mb-3"
-								tag="h5"
-								text="Disponible de suite"
-								icon="check"
-								icon-color="primary"
-								icon-position="start" />
-
-							<CommonsTitle
-								class="mb-3"
-								tag="h5"
-								text="Une équipe polyvalente"
-								icon="check"
-								icon-color="primary"
-								icon-position="start" />
-						</div>
-						<div class="col-sm-6">
-							<CommonsTitle
-								class="mb-3"
-								tag="h5"
-								text="Support à tout moment"
-								icon="check"
-								icon-color="primary"
-								icon-position="start" />
-
-							<CommonsTitle
-								class="mb-3"
-								tag="h5"
-								text="Tarification abordable"
-								icon="check"
-								icon-color="primary"
-								icon-position="start" />
-						</div>
-					</div>
-					<div class="d-flex align-items-center mb-4">
-						<div
-							id="phone-container"
-							class="d-flex align-items-center justify-content-center rounded"
-							style="width: 60px; height: 60px; border-radius: 30px !important">
-							<i id="phone_number" class="fa fa-phone-alt text-white"></i>
-						</div>
-						<div class="ps-4">
-							<CommonsTitle
-								tag="h4"
-								class="mb-2"
-								text="Un coup de fil et on est là pour vous"></CommonsTitle>
-							<CommonsTitle
-								tag="h5"
-								class="text-primary mb-0"
-								text="+261 34 68 047 17"></CommonsTitle>
-						</div>
-					</div>
-					<a
-						href="/contact"
-						class="btn btn-primary py-3 px-5 mt-3"
-						id="request_quote"
-						>Demander devis</a
-					>
+						class="mb-4 text-justify"
+						text="Notre équipe n'est pas seulement un groupe de collègues, mais une famille de talents diversifiés qui partagent une passion commune pour l'excellence technologique. Chacun d'entre nous apporte des compétences uniques et une énergie créative qui alimentent notre croissance continue. En tant que Koders, nous avons évolué ensemble et continuerons à le faire, façonnant ainsi l'avenir de la technologie avec audace et détermination." />
 				</div>
+				<a
+					href="/contact"
+					class="btn btn-primary py-3 px-5 mt-3"
+					id="request_quote"
+					>Demander devis</a
+				>
 			</div>
 		</div>
 	</div>
@@ -107,7 +67,7 @@
 				yoyo: true,
 				opacity: 0,
 				duration: 1,
-				x: -100,
+				x: 200,
 			});
 			gsap.to('#phone_number', {
 				ease: 'power2.inOut',
