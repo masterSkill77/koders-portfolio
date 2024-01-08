@@ -1,6 +1,9 @@
 <script setup>
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/all';
+	import { register } from 'swiper/element/bundle';
+	// register Swiper custom elements
+	register();
 	onMounted(() => {
 		if (process.client) {
 			gsap.registerPlugin(ScrollTrigger);
@@ -53,11 +56,26 @@
 				</div>
 				<div class="col-lg-5" style="height: 500px">
 					<div class="position-relative h-100">
-						<img
-							class="w-100 h-100 rounded"
-							id="image_ceo"
-							style="object-fit: scale-down"
-							src="/img/ceo_fab.jpg" />
+						<swiper-container
+							slides-per-view="1"
+							:autoplay="{ delay: 5000 }"
+							speed="2000"
+							loop="true">
+							<swiper-slide>
+								<img
+									class="w-100 rounded"
+									id="image_ceo"
+									style="object-fit: scale-down; height: 500px"
+									src="/img/Oskar.jpg" />
+							</swiper-slide>
+							<swiper-slide>
+								<img
+									class="w-100 rounded"
+									id="image_ceo"
+									style="object-fit: scale-down; height: 500px"
+									src="/img/ceo_fab.jpg" />
+							</swiper-slide>
+						</swiper-container>
 					</div>
 				</div>
 			</div>
